@@ -25,18 +25,57 @@ SET time_zone = "+07:00";
 
 DROP DATABASE IF EXISTS web;
 CREATE DATABASE IF NOT EXISTS web;
-
---
--- Table structure for table `quess`
---
 USE web;
 
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user`(
+  `id` int NOT NULL,
+  `username` varchar(256) NOT NULL,
+  `password` varchar(256) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`) VALUES
+(1, 'username', '123456');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+COMMIT;
+--
+-- Table structure for table `user`
+--
+
 CREATE TABLE `quess` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `lable` text NOT NULL,
   `anslist` text NOT NULL,
   `ans` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 
 --
 -- Dumping data for table `quess`
@@ -63,9 +102,10 @@ ALTER TABLE `quess`
 -- AUTO_INCREMENT for table `quess`
 --
 ALTER TABLE `quess`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
-COMMIT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+

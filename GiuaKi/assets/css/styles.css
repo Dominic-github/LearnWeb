@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.hiden {
+  display: none !important;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(60deg, #6373ff, #bf59ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-form-login {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 333px;
+  width: 400px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  padding: 20px;
+  padding: 20px;
+}
+
+.container-form-create {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 444px;
+  width: 400px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  padding: 20px;
+  padding: 20px;
+}
+
+.container-form-header {
+  font-size: 40px;
+  text-align: center;
+}
+
+.container-form label {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.container-form input {
+  padding: 5px 10px;
+  border-radius: 10px;
+  height: 18px;
+  border: 1px solid #333;
+  margin-bottom: 20px;
+}
+
+.container-form .btn {
+  font-size: 26px;
+  border: 1px solid #333;
+  color: white;
+  font-weight: 600;
+  border-radius: 20px;
+  background-image: linear-gradient(60deg, #6373ff, #bf59ff);
+  padding: 10px 20px;
+}
+.container-form p {
+  margin-top: 20px;
+  text-align: center;
+}
+.container-form button {
+  border: none;
+  cursor: pointer;
+}
