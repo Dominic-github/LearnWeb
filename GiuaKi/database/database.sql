@@ -35,6 +35,7 @@ USE web;
 CREATE TABLE `user`(
   `id` int NOT NULL,
   `username` varchar(256) NOT NULL,
+  `email` varchar(256) NOT NULL,
   `password` varchar(256) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -42,8 +43,8 @@ CREATE TABLE `user`(
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `password`) VALUES
-(1, 'username', '123456');
+INSERT INTO `user` (`id`, `username`, `email`, `password`) VALUES
+(1, 'username', 'username@gmail.com', '123456');
 
 --
 -- Indexes for dumped tables
