@@ -1,7 +1,7 @@
 version: '3.8'
 services:
     db:
-        container_name: db-web
+        container_name: db-learnweb
         image: mysql
         environment:
             MYSQL_ROOT_PASSWORD: 123456 

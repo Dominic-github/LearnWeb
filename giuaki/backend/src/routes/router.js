@@ -1,11 +1,13 @@
 import express from 'express'
 import * as userController from '../controller/userController.js'
 import * as quessController from '../controller/quessController.js'
-import cookie from 'cookie'
 
 let router = express.Router()
 
 export let initWebRoutes = (app) => {
+
+  router.get('/', userController.getHomePage);
+
   router.get('/index', function (req, res) {
     res.render('index', {
       data: JSON.stringify({
@@ -14,6 +16,7 @@ export let initWebRoutes = (app) => {
       })
     })
   })
+
   router.get('/home', quessController.handleGetQuess)
 
   router.get('/error', function (req, res) {
